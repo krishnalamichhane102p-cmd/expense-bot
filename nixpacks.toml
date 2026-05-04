@@ -1,0 +1,5 @@
+# nixpacks.toml — tells Railway's build system to install system dependencies
+# This provides libpq (PostgreSQL client library) needed by psycopg2
+
+[phases.setup]
+nixPkgs = ["postgresql", "gcc"]
