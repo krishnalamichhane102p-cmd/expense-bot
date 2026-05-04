@@ -1,0 +1,12 @@
+# ============================================
+# railway.toml — Railway Deployment Config
+# Railway auto-detects Python and reads this file.
+# ============================================
+
+[build]
+builder = "nixpacks"           # Railway's smart build system — no Dockerfile needed
+
+[deploy]
+startCommand = "python3 bot.py"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 5
